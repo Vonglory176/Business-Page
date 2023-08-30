@@ -1,0 +1,42 @@
+#products-section {
+    background-image: linear-gradient(135deg, hsla(0, 0%, 100%, 1) 0%, hsla(200, 100%, 39%, 1) 50%, hsla(220, 88%, 40%, 1) 100%); //, url("../assets/event/ocularinteraction2.jpg")
+    color:white;
+
+    .carousel {
+        height: 448px;
+        // margin: 0 15px;
+        // padding: 15px;
+
+        // .carousel-control-next, .carousel-control-prev {
+        //     position: absolute;
+        //     top:0;
+        //     bottom:0;
+        // }
+        
+        .carousel-inner {
+            height: inherit;
+            .carousel-item.active, .carousel-item-start, .carousel-item-end{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: inherit;
+                
+                img {
+                    max-height: 100%;
+                    max-width: 340px;
+                    padding-top: 15px;
+                }
+                h6 {
+                    position: absolute;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    #productContent-div {
+        // position: absolute;
+        // bottom:0;
+        padding: 15px;
+    }
+}

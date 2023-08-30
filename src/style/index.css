@@ -1,30 +1,209 @@
 @import 'bootstrap/dist/css/bootstrap.css';
-body {
-  background-image: url("../assets/bkg_body.gif");
+p {
+  font-size: 22px;
 }
 
+h2 {
+  font-size: 32px;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+#navbar-section {
+  margin-bottom: 60px;
+}
+#navbar-section > nav {
+  background-image: url("../assets/background/bkg_body.png");
+  height: 60px;
+}
+#navbar-section > nav > img {
+  padding-left: 5px;
+}
+#navbar-section > nav > button {
+  display: flex;
+  justify-content: end;
+  margin-right: 5px;
+  width: calc(100% - 150px);
+  border: none !important;
+  box-shadow: 0 0 0 0 !important;
+}
+@media screen and (max-width: 991px) {
+  #navbar-section > nav .navbar-collapse.show, #navbar-section > nav .navbar-collapse.collapsing {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 8px;
+  }
+  #navbar-section > nav .navbar-collapse.show .navbar-nav > a, #navbar-section > nav .navbar-collapse.show .navbar-nav > .nav-item, #navbar-section > nav .navbar-collapse.collapsing .navbar-nav > a, #navbar-section > nav .navbar-collapse.collapsing .navbar-nav > .nav-item {
+    padding-left: 5px;
+  }
+  #navbar-section > nav .navbar-collapse.show .navbar-nav > a, #navbar-section > nav .navbar-collapse.show .navbar-nav > .nav-item, #navbar-section > nav .navbar-collapse.collapsing .navbar-nav > a, #navbar-section > nav .navbar-collapse.collapsing .navbar-nav > .nav-item {
+    border-top: 1px solid rgba(0, 0, 0, 0.175);
+  }
+  #navbar-section > nav .navbar-collapse.show .nav-item, #navbar-section > nav .navbar-collapse.collapsing .nav-item {
+    transition: all 0.4s;
+    max-height: 40px;
+    display: block;
+    overflow: hidden;
+  }
+  #navbar-section > nav .navbar-collapse.show .nav-item.show, #navbar-section > nav .navbar-collapse.collapsing .nav-item.show {
+    max-height: 300px;
+  }
+  #navbar-section > nav .navbar-collapse.show .nav-item .dropdown-menu.show, #navbar-section > nav .navbar-collapse.collapsing .nav-item .dropdown-menu.show {
+    margin: 0;
+    margin-left: -5px;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0;
+  }
+  #navbar-section > nav .navbar-collapse.show .nav-item, #navbar-section > nav .navbar-collapse.show .nav-item a, #navbar-section > nav .navbar-collapse.collapsing .nav-item, #navbar-section > nav .navbar-collapse.collapsing .nav-item a {
+    background: none;
+    margin: 0;
+  }
+}
 #navbar-section img {
-  max-height: 75px !important;
+  max-height: 44px !important;
 }
 #navbar-section #navbarRow2-div {
   background-color: #444;
 }
-#navbar-section #navbarRow2-div button {
-  background: none;
-  border: none;
+
+#landing-section {
+  min-height: calc(100vh - 75px);
+  min-width: 100vw;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+#landing-section #landingLogo-div {
+  z-index: 1;
+}
+#landing-section #landingLogo-div #landingLogo-img {
+  padding: 0 10px;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+#landing-section .slider {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#landing-section .slider::before, #landing-section .slider::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 50vw;
+}
+#landing-section .slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+#landing-section .slider::before {
+  left: 0;
+  top: 0;
+}
+#landing-section .slider .slide-track {
+  animation: scroll 10s linear infinite;
+  display: flex;
+  width: 200vw;
+  height: 100%;
+}
+#landing-section .slider .slide {
+  background-image: url("../assets/background/eyebackground4.jpg");
+  height: 100%;
+  width: 100vw;
 }
 
-#events-section {
-  background-image: linear-gradient(90deg, rgba(0, 130, 197, 0.7), rgba(12, 72, 190, 0.7)), url("../assets/ocularEvent2.jpg");
+#about-section {
+  padding-top: 100%;
+  background-image: url("../assets/background/ocularGroup2.png");
   background-position: center;
   background-size: cover;
 }
+#about-section #aboutWrap-div:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background-image: url("../assets/background/bkg_body.png");
+}
+#about-section #aboutWrap-div {
+  position: relative;
+}
+#about-section #aboutContent-div {
+  position: relative;
+  padding: 15px;
+}
+
+#products-section {
+  background-image: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(200, 100%, 39%) 50%, hsl(220, 88%, 40%) 100%);
+  color: white;
+}
+#products-section .carousel {
+  height: 448px;
+}
+#products-section .carousel .carousel-inner {
+  height: inherit;
+}
+#products-section .carousel .carousel-inner .carousel-item.active, #products-section .carousel .carousel-inner .carousel-item-start, #products-section .carousel .carousel-inner .carousel-item-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+#products-section .carousel .carousel-inner .carousel-item.active img, #products-section .carousel .carousel-inner .carousel-item-start img, #products-section .carousel .carousel-inner .carousel-item-end img {
+  max-height: 100%;
+  max-width: 340px;
+  padding-top: 15px;
+}
+#products-section .carousel .carousel-inner .carousel-item.active h6, #products-section .carousel .carousel-inner .carousel-item-start h6, #products-section .carousel .carousel-inner .carousel-item-end h6 {
+  position: absolute;
+  font-size: 22px;
+}
+#products-section #productContent-div {
+  padding: 15px;
+}
+
+#events-section {
+  background-image: linear-gradient(90deg, rgba(0, 130, 197, 0.7), rgba(12, 72, 190, 0.7)), url("../assets/event/ocularEvent2.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 15px 0;
+}
 #events-section .eventTile-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3px;
   border: 1px solid #fff;
   background-color: #0082c5;
 }
 
 #footer-section {
-  background-color: #444;
+  background: linear-gradient(135deg, hsl(0, 0%, 27%) 0%, hsl(210, 11%, 15%) 100%);
   color: white;
+}
+#footer-section #knowMore-div a {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+}
+#footer-section #contact-div .lnr {
+  margin-top: 1.5px;
+  font-size: 20px;
 }/*# sourceMappingURL=index.css.map */

@@ -1,10 +1,12 @@
-import logo from "../assets/OcularLogo2.png"
+import logo from "../assets/logo/OcularLogo4.png"
 import {Form, Button, ButtonGroup, Dropdown, DropdownButton} from "react-bootstrap"
-import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Nav, Navbar, NavDropdown, Col, Row } from "react-bootstrap";
 
 
 export default function NavbarComponent() {
 //https://www.youtube.com/watch?v=u1HyG535JY0    
+//https://www.pluralsight.com/guides/react-bootstrap:-using-event-keys-in-nav-dropdown (Interesting)
+
 return (
         <section id="navbar-section" >
             {/*https://frontendshape.com/post/react-bootstrap-5-search-bar-example*/}
@@ -20,82 +22,145 @@ return (
                 </div>
             </div> */}
 
-            <Navbar collapseOnSelect expand="lg">
-                <img src={logo} alt="Ocuar Instruments Logo" className="img-fluid"/>
+            <Navbar collapseOnSelect expand="lg" fixed="top">
+                <img src={logo} alt="Ocuar Instruments Logo"/>
 
                 {/* <Navbar.Brand href="#home">Dice Roller</Navbar.Brand> */}
 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="mr-auto">
-                <Nav.Link href="#features">Features</Nav.Link>
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
-                <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                Separated link
-                </NavDropdown.Item>
-                </NavDropdown>
-                </Nav>
-                <Nav>
-                <Nav.Link href="#deets">More deets</Nav.Link>
-                <Nav.Link eventKey={2} href="#memes">
-                Dank memes
-                </Nav.Link>
-                </Nav>
+                    <Nav>
+                        <Nav.Link href="#">Home</Nav.Link>
+
+                        <NavDropdown title="About Us">
+                            <NavDropdown.Item href="#">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Another action</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#">Separated link</NavDropdown.Item>
+                        </NavDropdown>
+
+                        <NavDropdown title="Products">
+                            <NavDropdown.Item href="#">View all products</NavDropdown.Item>
+                            <NavDropdown.Item href="#">View products by collection</NavDropdown.Item>
+                            <NavDropdown.Item href="#">View products by pathway</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#">Product care</NavDropdown.Item>
+                        </NavDropdown>
+
+                        {/* <Nav.Link href="#">Product Care</Nav.Link> */}
+
+                        <NavDropdown title="FAQ's">
+                            <NavDropdown.Item href="#">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Another action</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#">Separated link</NavDropdown.Item>
+                        </NavDropdown>
+
+                        <NavDropdown title="Knowledge Center">
+                            <NavDropdown.Item href="#">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Another action</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#">Separated link</NavDropdown.Item>
+                        </NavDropdown>
+
+                        <Nav.Link href="#">Students</Nav.Link>
+
+                        {/* <NavDropdown title="Optometry Products">
+                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        </NavDropdown> */}
+
+                        <NavDropdown title="Locate Distributor">
+                            <NavDropdown.Item href="#">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Another action</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#">Separated link</NavDropdown.Item>
+                        </NavDropdown>
+
+                        <Nav.Link href="#">Contact Us</Nav.Link>
+                    </Nav>
+                    {/* <Nav className="mr-auto">
+                        <Nav.Link href="#features">Features</Nav.Link>
+                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav> */}
+
+                    <Form inline>
+                        <Row>
+                        <Col xs="auto">
+                            <Form.Control
+                            type="text"
+                            placeholder="Search"
+                            className=" mr-sm-2"
+                            />
+                        </Col>
+                        <Col xs="auto">
+                            <Button type="submit">Submit</Button>
+                        </Col>
+                        </Row>
+                    </Form>
+                    
                 </Navbar.Collapse>
-            </Navbar>
-            
-            {/* <div id="navbarRow2-div" className="d-flex justify-content-between">
-                <Button variant="primary">Home</Button>
-
-                <DropdownButton id="dropdown-basic-button" title="About Us">
-                    <Dropdown.Item href="#/action-1">Action 1</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Action 2</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Action 3</Dropdown.Item>
-                </DropdownButton>
-
-                <DropdownButton id="dropdown-basic-button" title="All Products">
-                    <Dropdown.Item href="#/action-1">Action 1</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Action 2</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Action 3</Dropdown.Item>
-                </DropdownButton>
-
-                <Button variant="primary">Product Care</Button>
-
-                <DropdownButton id="dropdown-basic-button" title="FAQ's">
-                    <Dropdown.Item href="#/action-1">Action 1</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Action 2</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Action 3</Dropdown.Item>
-                </DropdownButton>
-
-                <DropdownButton id="dropdown-basic-button" title="Knowledge Center">
-                    <Dropdown.Item href="#/action-1">Action 1</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Action 2</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Action 3</Dropdown.Item>
-                </DropdownButton>
-
-                <Button variant="primary">Students</Button>
-
-                <DropdownButton id="dropdown-basic-button" title="Optometry Products">
-                    <Dropdown.Item href="#/action-1">Action 1</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Action 2</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Action 3</Dropdown.Item>
-                </DropdownButton>
-
-                <DropdownButton id="dropdown-basic-button" title="Locate Distributor">
-                    <Dropdown.Item href="#/action-1">Action 1</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Action 2</Dropdown.Item>
-                    <Dropdown.Item href="#/action-1">Action 3</Dropdown.Item>
-                </DropdownButton>
-
-                <Button variant="primary">Contact Us</Button>
-            </div> */}
+            </Navbar>            
         </section>
     )
 }
+
+{/* <div id="navbarRow2-div" className="d-flex justify-content-between">
+    <Button variant="primary">Home</Button>
+
+    <DropdownButton id="dropdown-basic-button" title="About Us">
+        <Dropdown.Item href="#/action-1">Action 1</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">Action 2</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">Action 3</Dropdown.Item>
+    </DropdownButton>
+
+    <DropdownButton id="dropdown-basic-button" title="All Products">
+        <Dropdown.Item href="#/action-1">Action 1</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">Action 2</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">Action 3</Dropdown.Item>
+    </DropdownButton>
+
+    <Button variant="primary">Product Care</Button>
+
+    <DropdownButton id="dropdown-basic-button" title="FAQ's">
+        <Dropdown.Item href="#/action-1">Action 1</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">Action 2</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">Action 3</Dropdown.Item>
+    </DropdownButton>
+
+    <DropdownButton id="dropdown-basic-button" title="Knowledge Center">
+        <Dropdown.Item href="#/action-1">Action 1</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">Action 2</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">Action 3</Dropdown.Item>
+    </DropdownButton>
+
+    <Button variant="primary">Students</Button>
+
+    <DropdownButton id="dropdown-basic-button" title="Optometry Products">
+        <Dropdown.Item href="#/action-1">Action 1</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">Action 2</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">Action 3</Dropdown.Item>
+    </DropdownButton>
+
+    <DropdownButton id="dropdown-basic-button" title="Locate Distributor">
+        <Dropdown.Item href="#/action-1">Action 1</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">Action 2</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">Action 3</Dropdown.Item>
+    </DropdownButton>
+
+    <Button variant="primary">Contact Us</Button>
+</div> */}

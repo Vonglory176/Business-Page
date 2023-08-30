@@ -1,10 +1,13 @@
-export default function EventTile() {
+import {Col, Row} from "react-bootstrap";
+
+export default function EventTile({name,date,location,booth}) {
     return (
-        <div className="eventTile-div d-flex flex-column text-center text-white col-10 col-sm-5 col-md-3 col-lg-6">
-            <h5>Association for Research in Vision and Ophthalmology</h5>
-            <span>April 23-27</span>
-            <span>New Orleans, LA  USA </span>
-            <span>Booth #1110</span>
-        </div>
+        <Col xs="12" sm="5" md="3" lg="6" className="eventTile-div text-center text-white rounded-1">
+            <h5>{name}</h5>
+            <hr style={{width:"80%", margin:"0 auto"}}/>
+            <h6 style={{margin:"3px"}}>{date}</h6>
+            <span>{location}</span>
+            <span>{booth}</span>
+        </Col>
     )
 }

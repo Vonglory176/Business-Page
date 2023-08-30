@@ -1,0 +1,33 @@
+#about-section{
+    padding-top: 100%;
+    // background-image: url("../assets/stock/ophthamologist2.jpg");
+    background-image: url('../assets/background/ocularGroup2.png');
+    // background-image: url("../assets/event/ocularInteraction5.jpg");
+    background-position: center;
+    background-size: cover;
+
+    #aboutWrap-div:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        background-image: url('../assets/background/bkg_body.png');
+        // background-position: 50% 0;
+    }
+
+    #aboutWrap-div {
+        position: relative;
+    }
+
+    #aboutContent-div {
+        // background-image: url("../assets//background/bkg_body.gif");
+        // background-color:rgba(0, 0, 0, 0.5);
+        // margin-top: 100%;
+        position: relative;
+        padding:15px;
+    }
+}

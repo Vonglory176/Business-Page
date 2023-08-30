@@ -1,0 +1,20 @@
+#events-section {
+    background-image: linear-gradient(90deg, rgb(0, 130, 197,0.7), rgb(12, 72, 190,0.7)), url("../assets/event/ocularEvent2.jpg");
+    //background-image: linear-gradient(135deg, hsla(0, 0%, 100%, 1) 0%, hsla(200, 100%, 39%, 1) 50%, hsla(220, 88%, 40%, 1) 100%);
+    background-position: center;
+    background-size: cover;
+
+    padding: 15px 0;
+
+    .eventTile-div {
+        // background-color: rgb(68, 68, 68, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:3px;
+        border: 1px solid #fff;
+        background-color: #0082c5;
+        // #0068b5 VOLK
+        // #0c48be #0082c5 Ocular
+    }
+}

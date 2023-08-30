@@ -1,0 +1,20 @@
+#footer-section {
+    background: linear-gradient(135deg, hsla(0, 0%, 27%, 1) 0%, hsla(210, 11%, 15%, 1) 100%);
+    color: white;
+
+    #knowMore-div {
+
+        a {
+            width: fit-content;
+            color:white;
+            // text-decoration: none;
+        }
+    }
+
+    #contact-div {
+        .lnr {
+            margin-top:1.5px;
+            font-size: 20px;
+        }
+    }
+}

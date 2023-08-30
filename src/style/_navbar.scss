@@ -1,0 +1,73 @@
+#navbar-section {
+    margin-bottom:60px;
+    > nav {        
+        >img{padding-left:5px;}
+        >button{
+            display: flex;
+            justify-content: end;
+
+            margin-right:5px;
+            width:calc(100% - 150px);
+            border: none !important;
+            box-shadow: 0 0 0 0 !important;
+        }
+        background-image: url("../assets/background/bkg_body.png");
+        height:60px;
+        @media screen and (max-width:991px) {
+            .navbar-collapse.show, .navbar-collapse.collapsing {
+                background-color: rgb(255, 255, 255, 0.9);
+                margin-top: 8px;
+    
+                .navbar-nav {
+                    >a, >.nav-item {padding-left:5px}
+                    >a, >.nav-item {border-top:1px solid rgba(0, 0, 0, 0.175)}
+                }
+        
+                .nav-item {
+                    -webkit-transition: all 0.4s;
+                    -moz-transition: all 0.4s;
+                    -ms-transition: all 0.4s;
+                    -o-transition: all 0.4s;
+                    transition: all 0.4s;
+        
+                    max-height: 40px;
+                    display: block;
+                    overflow: hidden;
+                    // opacity: 0;
+            
+                    &.show {
+                        max-height: 300px;
+                        // opacity: 1;
+                    }
+        
+                    .dropdown-menu.show {
+                        // background: none;
+                        margin:0;
+                        margin-left:-5px;
+                        // padding-left:5px;
+                        // border: none;
+                        border-right: none;
+                        border-left: none;
+                        border-bottom: none;
+                        border-radius: 0;
+                    }
+        
+                    &, a {
+                        background:none;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    img {max-height: 44px !important;}
+    #navbarRow2-div {
+        background-color:#444;
+        // button {
+            // background: none; 
+            // border:none;
+        // }
+    }
+
+}
