@@ -97,21 +97,16 @@ return (
                             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                         </NavDropdown>
                     </Nav> */}
-
-                    <Form inline>
-                        <Row>
-                        <Col xs="auto">
+                        <Col className="d-flex rounded-2 overflow-hidden m-1">
+                            <Button type="submit" className="rounded-0 btn-md">
+                                <span class="lnr lnr-magnifier"></span>
+                            </Button>
                             <Form.Control
                             type="text"
-                            placeholder="Search"
-                            className=" mr-sm-2"
+                            placeholder="Search the entire store here"
+                            className=" mr-sm-2 rounded-0"
                             />
                         </Col>
-                        <Col xs="auto">
-                            <Button type="submit">Submit</Button>
-                        </Col>
-                        </Row>
-                    </Form>
                     
                 </Navbar.Collapse>
             </Navbar>            

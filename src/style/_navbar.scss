@@ -1,6 +1,9 @@
 #navbar-section {
     margin-bottom:60px;
-    > nav {        
+    > nav {
+        padding: 0 5px;
+        background-image: url("../assets/background/bkg_body.png");
+        @media screen and (max-width:991px) {
         >img{padding-left:5px;}
         >button{
             display: flex;
@@ -11,45 +14,62 @@
             border: none !important;
             box-shadow: 0 0 0 0 !important;
         }
-        background-image: url("../assets/background/bkg_body.png");
         height:60px;
-        @media screen and (max-width:991px) {
             .navbar-collapse.show, .navbar-collapse.collapsing {
                 background-color: rgb(255, 255, 255, 0.9);
                 margin-top: 8px;
-    
+                
                 .navbar-nav {
-                    >a, >.nav-item {padding-left:5px}
-                    >a, >.nav-item {border-top:1px solid rgba(0, 0, 0, 0.175)}
+                    >a, >div {
+                        padding-left:5px;
+                        border-top:1px solid rgba(0, 0, 0, 0.175);
+                        color: black;
+                    }
                 }
         
-                .nav-item {
-                    -webkit-transition: all 0.4s;
-                    -moz-transition: all 0.4s;
-                    -ms-transition: all 0.4s;
-                    -o-transition: all 0.4s;
-                    transition: all 0.4s;
-        
+                .nav-item {        
                     max-height: 40px;
                     display: block;
                     overflow: hidden;
-                    // opacity: 0;
             
-                    &.show {
-                        max-height: 300px;
-                        // opacity: 1;
+                    &.dropdown > a {
+                        color:black;
+                        &::after {
+                            border-left: 4.5px solid transparent;
+                            border-right: 4.5px solid transparent; 
+                            vertical-align: .1rem;
+                            width: 9px;
+                        }
+                        &.show::after {
+                            border-top:0;
+                            border-bottom: 6px solid #343a40;
+                        }
+                        &:not(.show)::after{                            
+                            border-top: 6px solid #343a40;
+                            border-bottom:0;
+                        }
+                    }
+
+                    &.show { 
+                        -webkit-transition: all 0.4s;
+                        -moz-transition: all 0.4s;
+                        -ms-transition: all 0.4s;
+                        -o-transition: all 0.4s;
+                        transition: all 0.4s;
+
+                        max-height: 300px; 
                     }
         
                     .dropdown-menu.show {
                         // background: none;
-                        margin:0;
-                        margin-left:-5px;
                         // padding-left:5px;
                         // border: none;
+                        margin:0;
+                        margin-left:-5px;
                         border-right: none;
                         border-left: none;
                         border-bottom: none;
-                        border-radius: 0;
+                        border-radius: 0;                        
                     }
         
                     &, a {

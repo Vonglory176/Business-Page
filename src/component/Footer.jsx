@@ -8,11 +8,11 @@ export default function Footer() {
     return (
         <section id="footer-section" className="d-flex flex-wrap gap-5 p-3">
             {/* NEWSLETTER */}
-            <Col id="newsletter-div" xs="12" className="d-flex gap-1">
+            <Col id="newsletter-div" xs="12" className="d-flex gap-1" style={{maxWidth:"331px"}}>
                 <Form inline>
                     <Row className="gap-2">
                         <Col xs="8">
-                            <img className="img-fluid" src={logo}/>
+                            <img src={logo} style={{maxWidth:"143.03px"}}/> {/*className="img-fluid"*/}
                         </Col>
                         <Col xs="auto">
                             <h6>Sign up for our newsletter and receive the latest product news, articles, and offers.</h6>
@@ -26,7 +26,7 @@ export default function Footer() {
                             </Col>
                         </Col>
                         <Col className="d-flex align-items-center">
-                            {/* <h6 className="m-0 px-1">FOLLOW US</h6> */}
+                            <h6 className="m-0 px-1">FOLLOW US</h6>
                             <img src={facebook}/>
                             <img src={twitter}/>
                             <img src={youtube}/>
@@ -37,7 +37,7 @@ export default function Footer() {
             {/* <span className="col-12 text-center">2255 116th Ave NE, Bellevue, WA 98004 | T: 1-425-455-5200 | Toll Free: 800-888-6616 | F: 1-425-462-6669 | E: contact@ocularinc.com</span> */}
             
             {/* KNOW MORE */}
-            <Col id="knowMore-div" xs="12" className="d-flex flex-column gap-2">
+            <Col id="knowMore-div" xs="12" className="d-flex flex-column gap-2" style={{maxWidth:"fit-content"}}>
                 <h6>KNOW MORE</h6>
                 <a target="_blank" href="#">About Ocular</a>
                 <a target="_blank" href="#">Privacy Policy</a>
@@ -48,7 +48,7 @@ export default function Footer() {
             </Col>
 
             {/* CONTACT */}
-            <Col id="contact-div" xs="12" className="d-flex flex-column gap-2">
+            <Col id="contact-div" xs="12" md="6" className="d-flex flex-column gap-2" style={{maxWidth:"fit-content"}}>
                 <h6>CONTACT</h6>
                 <div className="d-flex gap-1">
                     <span className="lnr lnr-phone-handset"></span>

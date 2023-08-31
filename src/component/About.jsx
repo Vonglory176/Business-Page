@@ -4,7 +4,6 @@ import stockPhoto1 from "../assets/stock/ophthamologist2.jpg"
 export default function About() {
     return (
         <section id="about-section" className='container-fluid'>
-            {/* <img id="about-img" alt="Image of an ophthamologist" className="img-fluid" src={stockPhoto1}/> */}
             <div id="aboutWrap-div">
                 <div id="aboutContent-div">
                     <h2>ABOUT OCULAR</h2>
