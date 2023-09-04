@@ -3,6 +3,17 @@
     // font-family: arial, helvetica, sans-serif;
 // }
 
+// main {
+    // display: grid;
+    // grid-template-columns: repeat(7, 100vw);
+    // grid-template-rows: repeat(7, 100vw);
+// }
+
+// .contentTile {
+    // width:100vw;
+    // height: 100vw;
+// }
+
 p {
     // margin:0;
     font-size: 22px;
@@ -23,4 +34,5 @@ h2 {
 @import './about.scss';
 @import './products.scss';
 @import './events.scss';
+@import './extra.scss';
 @import './footer.scss';

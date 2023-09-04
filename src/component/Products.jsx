@@ -10,23 +10,23 @@ export default function Products() {
         <section id="products-section" className='container-fluid'>
             <Carousel className='col-12' indicators={false} wrap={true}>
                     {/* <h6 style={{top:"25px"}}>Diagnostic Lenses</h6> */}
-                <Carousel.Item>
+                {/* <Carousel.Item>
                     <img  className="img-fluid" src={indirectGroup}/>
-                </Carousel.Item>
+                </Carousel.Item> */}
 
                     {/* <h6 style={{right:"20px", bottom:"45px",width:"200px"}}>Ahmed DVX Surgical Gonio Lens</h6>*/}
-                <Carousel.Item>
+                {/* <Carousel.Item>
                     <img  className="img-fluid" src={oadvxh}/>
-                </Carousel.Item>
+                </Carousel.Item> */}
 
                     {/* <h6 style={{top:"160px"}}>Refill Kits</h6>*/}
-                <Carousel.Item>
+                {/* <Carousel.Item>
                     <img  className="img-fluid" src={oemikit}/>
-                </Carousel.Item>
+                </Carousel.Item> */}
 
-                <Carousel.Item>
+                {/* <Carousel.Item>
                     <img  className="img-fluid" src={various}/>                   
-                </Carousel.Item>
+                </Carousel.Item> */}
 
                 <Carousel.Item>
                     <img  className="img-fluid" src={catalog}/>                   

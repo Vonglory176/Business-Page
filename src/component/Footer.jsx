@@ -9,7 +9,7 @@ export default function Footer() {
         <section id="footer-section" className="d-flex flex-wrap gap-5 p-3">
             {/* NEWSLETTER */}
             <Col id="newsletter-div" xs="12" className="d-flex gap-1" style={{maxWidth:"331px"}}>
-                <Form inline>
+                <Form inline="true">
                     <Row className="gap-2">
                         <Col xs="8">
                             <img src={logo} style={{maxWidth:"143.03px"}}/> {/*className="img-fluid"*/}

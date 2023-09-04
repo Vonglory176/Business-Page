@@ -15,7 +15,6 @@ h2 {
   margin-bottom: 60px;
 }
 #navbar-section > nav {
-  padding: 0 5px;
   background-image: url("../assets/background/bkg_body.png");
 }
 @media screen and (max-width: 991px) {
@@ -155,6 +154,26 @@ h2 {
   background-position: center;
   background-size: cover;
 }
+#about-section #aboutWrap-div:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  background-image: url("../assets/background/bkg_body.png");
+}
+#about-section #aboutWrap-div {
+  position: relative;
+}
+#about-section #aboutContent-div {
+  position: relative;
+  margin: auto;
+  max-width: 480px;
+  padding: 30px;
+}
 @media screen and (max-width: 418px) {
   #about-section {
     padding-top: 100%;
@@ -189,26 +208,6 @@ h2 {
     background-repeat: no-repeat;
   }
 }
-#about-section #aboutWrap-div:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.9;
-  background-image: url("../assets/background/bkg_body.png");
-}
-#about-section #aboutWrap-div {
-  position: relative;
-}
-#about-section #aboutContent-div {
-  position: relative;
-  margin: auto;
-  max-width: 480px;
-  padding: 30px;
-}
 
 #products-section {
   background-image: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(200, 100%, 39%) 50%, hsl(220, 88%, 40%) 100%);
@@ -232,10 +231,6 @@ h2 {
   max-width: 340px;
   padding-top: 15px;
 }
-#products-section .carousel .carousel-inner .carousel-item.active h6, #products-section .carousel .carousel-inner .carousel-item-start h6, #products-section .carousel .carousel-inner .carousel-item-end h6 {
-  position: absolute;
-  font-size: 22px;
-}
 #products-section #productContent-div {
   max-width: 480px;
   margin: auto;
@@ -247,33 +242,22 @@ h2 {
     display: flex;
     background-image: linear-gradient(225deg, hsl(0, 0%, 100%) 0%, hsl(200, 100%, 39%) 50%, hsl(220, 88%, 40%) 100%);
   }
-  #products-section .carousel {
-    height: 448px;
-  }
   #products-section .carousel .carousel-inner {
     height: inherit;
   }
-  #products-section .carousel .carousel-inner .carousel-item.active, #products-section .carousel .carousel-inner .carousel-item-start, #products-section .carousel .carousel-inner .carousel-item-end {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: inherit;
-  }
   #products-section .carousel .carousel-inner .carousel-item.active img, #products-section .carousel .carousel-inner .carousel-item-start img, #products-section .carousel .carousel-inner .carousel-item-end img {
-    margin-left: 42%;
+    margin-left: 350px;
     max-height: 100%;
     max-width: 300px;
-    padding-top: 15px;
-  }
-  #products-section .carousel .carousel-inner .carousel-item.active h6, #products-section .carousel .carousel-inner .carousel-item-start h6, #products-section .carousel .carousel-inner .carousel-item-end h6 {
-    position: absolute;
-    font-size: 22px;
+    padding-top: 0px;
   }
   #products-section #productContent-div {
-    max-width: 45%;
     position: absolute;
-    bottom: 60px;
-    left: 70px;
+    width: 350px;
+    padding: 0 30px 0 0;
+    left: calc(50% - 350px + 30px);
+    top: 50%;
+    transform: translate(0, -50%);
   }
 }
 #events-section {
@@ -289,6 +273,11 @@ h2 {
   padding: 3px;
   border: 1px solid #fff;
   background-color: #0082c5;
+}
+
+.extraTile-div {
+  background-color: blue;
+  border: 1px solid black;
 }
 
 #footer-section {

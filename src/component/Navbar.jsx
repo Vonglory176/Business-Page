@@ -99,7 +99,7 @@ return (
                     </Nav> */}
                         <Col className="d-flex rounded-2 overflow-hidden m-1">
                             <Button type="submit" className="rounded-0 btn-md">
-                                <span class="lnr lnr-magnifier"></span>
+                                <span className="lnr lnr-magnifier"></span>
                             </Button>
                             <Form.Control
                             type="text"
