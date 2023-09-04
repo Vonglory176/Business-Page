@@ -1,7 +1,8 @@
 #landing-section {
     // background-image: url("../assets/background/eyebackground4.jpg");
-    min-height: calc(100vh - 75px);
-    min-width: 100vw;
+    // min-height: calc(100vh - 60px);
+    // width: 100vw;
+	// overflow: hidden;
 
     text-align: center;
     color:#fff;
@@ -11,9 +12,9 @@
         z-index: 1;
 
         #landingLogo-img {
-            padding: 0 10px;
+            padding: 0 10px; 
             // max-width: 500px;
-            // width:80%;
+            // width:80%; 
         }
     }
 
@@ -69,9 +70,9 @@
 	}
 }
 
-@media screen and (min-width:992px) {
-	#landing-section {
-		min-height: 400px;
-		max-height: 100vh;
-	}
-}
+// @media screen and (min-width:992px) {
+// 	#landing-section {
+// 		min-height: 45vw !important; //400px
+// 		max-height: 100vh;
+// 	}
+// }

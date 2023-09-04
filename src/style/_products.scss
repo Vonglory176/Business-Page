@@ -2,48 +2,44 @@
     background-image: linear-gradient(135deg, hsla(0, 0%, 100%, 1) 0%, hsla(200, 100%, 39%, 1) 50%, hsla(220, 88%, 40%, 1) 100%); //, url("../assets/event/ocularinteraction2.jpg")
     color:white;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    // @media screen and (max-width:767px) {
-        .carousel {
-            height: 448px;
-            // margin: 0 15px;
-            // padding: 15px;
-    
-            // .carousel-control-next, .carousel-control-prev {
-            //     position: absolute;
-            //     top:0;
-            //     bottom:0;
-            // }
-            
-            .carousel-inner {
+    .carousel {
+        position: relative;
+        margin: auto;
+        height: 50%;
+        
+        .carousel-inner {
+            height: 100%;
+            .carousel-item.active, .carousel-item-start, .carousel-item-end{
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 height: inherit;
-                .carousel-item.active, .carousel-item-start, .carousel-item-end{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: inherit;
-                    
-                    img {
-                        max-height: 100%;
-                        max-width: 340px;
-                        padding-top: 15px;
-                    }
-                    // h6 {
-                    //     position: absolute;
-                    //     font-size: 22px;
-                    // }
+                
+                img {
+                    height: 100%;
+                    // height: auto;
+                    // max-width: 100%;
+                    // max-width: 400px; //340px
+                    object-fit: scale-down;
+                    padding: 30px 30px 0 30px;
                 }
             }
         }
+    }
 
-        #productContent-div {
-            // position: absolute;
-            // bottom:0;
-            max-width: 480px;
-            margin: auto;
-            padding: 30px;
-        }
-    // }
+    #productContent-div {
+        // position: absolute;
+        max-width: 480px;
+        padding: 30px;
+        margin: 0 auto;
+        // bottom:0;
+        // left:50%;
+        // transform: translate(-50%,0)
+    }
 }
 
 $productHeaderWidth: 350px;
@@ -56,7 +52,7 @@ $productHeaderWidth: 350px;
 
         .carousel {            
             .carousel-inner {
-                height: inherit;
+                // height: inherit;
                 .carousel-item.active, .carousel-item-start, .carousel-item-end{
                     
                     img {  
@@ -84,5 +80,34 @@ $productHeaderWidth: 350px;
             transform: translate(0,-50%)
             // left:70px;
         }
+    }
+}
+
+@media screen and (min-width:992px) {
+    #products-section {
+        position: relative;
+        min-height: 35vw !important;
+        .carousel {            
+            position: absolute;
+            min-height: 100%;
+            .carousel-inner {
+                .carousel-item.active, .carousel-item-start, .carousel-item-end{
+                    img {  
+                        margin-left: calc($productHeaderWidth);                        
+                        max-height: 100%;
+                        max-width: 300px;
+                        padding-top: 0px;
+                    }
+                }
+            }
+        }
+        // #productContent-div {
+            // position: absolute;
+            // width: $productHeaderWidth;
+            // padding:0 30px 0 0; 
+            // left: calc(50% - $productHeaderWidth + 30px);
+            // top:50%;
+            // transform: translate(0,-50%)
+        // }
     }
 }

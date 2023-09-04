@@ -3,16 +3,25 @@
     // font-family: arial, helvetica, sans-serif;
 // }
 
-// main {
-    // display: grid;
-    // grid-template-columns: repeat(7, 100vw);
-    // grid-template-rows: repeat(7, 100vw);
-// }
-
 // .contentTile {
     // width:100vw;
     // height: 100vw;
-// }
+    // }
+main {
+    display: grid;
+    // grid-template-columns: repeat(7, 100vw);
+    
+    // section {
+    @media  screen and (max-width:418px) {
+        grid-template-rows: repeat(5, calc(667px));
+    }
+    @media  screen and (min-width:419px) and (max-width:767px) {
+        grid-template-rows: repeat(5, calc(741px));
+    }
+    @media  screen and (min-width:768px) and (max-width:991px) {}
+    @media  screen and (min-width:992px) {}
+    // }
+}
 
 p {
     // margin:0;

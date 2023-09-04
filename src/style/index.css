@@ -1,4 +1,17 @@
 @import 'bootstrap/dist/css/bootstrap.css';
+main {
+  display: grid;
+}
+@media screen and (max-width: 418px) {
+  main {
+    grid-template-rows: repeat(5, 667px);
+  }
+}
+@media screen and (min-width: 419px) and (max-width: 767px) {
+  main {
+    grid-template-rows: repeat(5, 741px);
+  }
+}
 p {
   font-size: 22px;
 }
@@ -88,8 +101,6 @@ h2 {
 }
 
 #landing-section {
-  min-height: calc(100vh - 75px);
-  min-width: 100vw;
   text-align: center;
   color: #fff;
   position: relative;
@@ -143,58 +154,55 @@ h2 {
   width: 100vw;
 }
 
-@media screen and (min-width: 992px) {
-  #landing-section {
-    min-height: 400px;
-    max-height: 100vh;
-  }
-}
 #about-section {
-  background-image: url("../assets/background/ocularGroup2.png");
-  background-position: center;
-  background-size: cover;
-}
-#about-section #aboutWrap-div:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.9;
+  position: relative;
   background-image: url("../assets/background/bkg_body.png");
 }
 #about-section #aboutWrap-div {
-  position: relative;
+  height: 50%;
 }
-#about-section #aboutContent-div {
-  position: relative;
+#about-section #aboutWrap-div #aboutContent-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: auto;
+  height: 100%;
+  width: 100%;
   max-width: 480px;
   padding: 30px;
 }
-@media screen and (max-width: 418px) {
-  #about-section {
-    padding-top: 100%;
-  }
+#about-section #aboutWrap-div:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/background/ocularGroup3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-@media screen and (min-width: 419px) and (max-width: 767px) {
-  #about-section {
-    padding-top: 75%;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  #about-section {
-    padding-top: 50%;
+@media screen and (min-width: 685px) {
+  #about-section #aboutWrap-div:before {
+    background-position: top;
   }
 }
 @media screen and (min-width: 992px) {
   #about-section {
+    min-height: 35vw !important;
     padding-left: 50%;
     background: none;
   }
-  #about-section #aboutWrap-div:after {
+  #about-section #aboutWrap-div {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+  }
+  #about-section #aboutWrap-div #aboutContent-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #about-section #aboutWrap-div:before {
     content: "";
     display: block;
     position: absolute;
@@ -204,6 +212,7 @@ h2 {
     height: 100%;
     margin-left: -100%;
     background-image: url("../assets/background/ocularGroup2.png");
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -213,12 +222,17 @@ h2 {
   background-image: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(200, 100%, 39%) 50%, hsl(220, 88%, 40%) 100%);
   color: white;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 #products-section .carousel {
-  height: 448px;
+  position: relative;
+  margin: auto;
+  height: 50%;
 }
 #products-section .carousel .carousel-inner {
-  height: inherit;
+  height: 100%;
 }
 #products-section .carousel .carousel-inner .carousel-item.active, #products-section .carousel .carousel-inner .carousel-item-start, #products-section .carousel .carousel-inner .carousel-item-end {
   display: flex;
@@ -227,23 +241,21 @@ h2 {
   height: inherit;
 }
 #products-section .carousel .carousel-inner .carousel-item.active img, #products-section .carousel .carousel-inner .carousel-item-start img, #products-section .carousel .carousel-inner .carousel-item-end img {
-  max-height: 100%;
-  max-width: 340px;
-  padding-top: 15px;
+  height: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  padding: 30px 30px 0 30px;
 }
 #products-section #productContent-div {
   max-width: 480px;
-  margin: auto;
   padding: 30px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
   #products-section {
     display: flex;
     background-image: linear-gradient(225deg, hsl(0, 0%, 100%) 0%, hsl(200, 100%, 39%) 50%, hsl(220, 88%, 40%) 100%);
-  }
-  #products-section .carousel .carousel-inner {
-    height: inherit;
   }
   #products-section .carousel .carousel-inner .carousel-item.active img, #products-section .carousel .carousel-inner .carousel-item-start img, #products-section .carousel .carousel-inner .carousel-item-end img {
     margin-left: 350px;
@@ -258,6 +270,22 @@ h2 {
     left: calc(50% - 350px + 30px);
     top: 50%;
     transform: translate(0, -50%);
+  }
+}
+@media screen and (min-width: 992px) {
+  #products-section {
+    position: relative;
+    min-height: 35vw !important;
+  }
+  #products-section .carousel {
+    position: absolute;
+    min-height: 100%;
+  }
+  #products-section .carousel .carousel-inner .carousel-item.active img, #products-section .carousel .carousel-inner .carousel-item-start img, #products-section .carousel .carousel-inner .carousel-item-end img {
+    margin-left: 350px;
+    max-height: 100%;
+    max-width: 300px;
+    padding-top: 0px;
   }
 }
 #events-section {

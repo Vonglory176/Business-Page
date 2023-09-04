@@ -19,8 +19,8 @@ function App() {
         <Products/>
         <Events/>
         <Extra/>
-        <Footer/>
       </main>
+      <Footer/>
     </>
   )
 }
