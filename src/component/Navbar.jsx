@@ -8,7 +8,7 @@ export default function NavbarComponent() {
 //https://www.pluralsight.com/guides/react-bootstrap:-using-event-keys-in-nav-dropdown (Interesting)
 
 return (
-        <section id="navbar-section" >
+        <section id="navbar-section">
             {/*https://frontendshape.com/post/react-bootstrap-5-search-bar-example*/}
                     {/* <a target="_blank" href="#">My Account</a> */}
                     {/* <a target="_blank" href="#">My Wishlist</a> */}

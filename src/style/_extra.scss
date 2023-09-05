@@ -1,4 +1,17 @@
-.extraTile-div {
-    background-color: blue;
-    border: 1px solid black;
+#extra-section {
+    display: grid;
+    grid-template-rows: repeat(4, 400px);
+    @media screen and (min-width:800px) {
+        grid-template-rows: repeat(2, 400px);
+        grid-template-columns: repeat(2,1fr);
+        // justify-content: center;
+    }
+
+    .extraTile-div {
+        background-color: blue;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

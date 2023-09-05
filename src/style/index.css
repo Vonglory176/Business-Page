@@ -1,4 +1,13 @@
 @import 'bootstrap/dist/css/bootstrap.css';
+body {
+  background-image: url("../assets/background/bkg_body.png");
+}
+
+main {
+  margin: auto;
+  max-width: 1500px;
+}
+
 p {
   font-size: 22px;
 }
@@ -89,7 +98,6 @@ h2 {
 
 #landing-section {
   min-height: calc(100vh - 75px);
-  min-width: 100vw;
   text-align: center;
   color: #fff;
   position: relative;
@@ -194,6 +202,18 @@ h2 {
     padding-left: 50%;
     background: none;
   }
+  #about-section #aboutWrap-div::before {
+    display: none;
+  }
+  #about-section #aboutWrap-div {
+    background-color: white;
+  }
+  #about-section #aboutContent-div {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   #about-section #aboutWrap-div:after {
     content: "";
     display: block;
@@ -205,6 +225,7 @@ h2 {
     margin-left: -100%;
     background-image: url("../assets/background/ocularGroup2.png");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
   }
 }
@@ -229,7 +250,7 @@ h2 {
 #products-section .carousel .carousel-inner .carousel-item.active img, #products-section .carousel .carousel-inner .carousel-item-start img, #products-section .carousel .carousel-inner .carousel-item-end img {
   max-height: 100%;
   max-width: 340px;
-  padding-top: 15px;
+  padding: 30px 30px 0 30px;
 }
 #products-section #productContent-div {
   max-width: 480px;
@@ -247,9 +268,7 @@ h2 {
   }
   #products-section .carousel .carousel-inner .carousel-item.active img, #products-section .carousel .carousel-inner .carousel-item-start img, #products-section .carousel .carousel-inner .carousel-item-end img {
     margin-left: 350px;
-    max-height: 100%;
-    max-width: 300px;
-    padding-top: 0px;
+    padding: 15px;
   }
   #products-section #productContent-div {
     position: absolute;
@@ -275,9 +294,22 @@ h2 {
   background-color: #0082c5;
 }
 
-.extraTile-div {
+#extra-section {
+  display: grid;
+  grid-template-rows: repeat(4, 400px);
+}
+@media screen and (min-width: 800px) {
+  #extra-section {
+    grid-template-rows: repeat(2, 400px);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+#extra-section .extraTile-div {
   background-color: blue;
   border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #footer-section {
