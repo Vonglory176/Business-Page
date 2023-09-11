@@ -8,7 +8,7 @@ export default function NavbarComponent() {
 //https://www.pluralsight.com/guides/react-bootstrap:-using-event-keys-in-nav-dropdown (Interesting)
 
 return (
-        <section id="navbar-section">
+        <section id="navbar-section" className="fixed-top">
             {/*https://frontendshape.com/post/react-bootstrap-5-search-bar-example*/}
                     {/* <a target="_blank" href="#">My Account</a> */}
                     {/* <a target="_blank" href="#">My Wishlist</a> */}
@@ -19,10 +19,10 @@ return (
                     <a target="_blank" href="#">Log in or Create Account</a>
                     <a target="_blank" href="#">My Cart</a>
                     <div>SEARCHBAR HERE!</div> 
-                </div>
-            </div> */}
+                    </div>
+                </div> */}
 
-            <Navbar collapseOnSelect expand="lg" fixed="top">
+            <Navbar collapseOnSelect expand="lg">
                 <img src={logo} alt="Ocuar Instruments Logo"/>
 
                 {/* <Navbar.Brand href="#home">Dice Roller</Navbar.Brand> */}
@@ -30,14 +30,19 @@ return (
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav>
+                        <Nav.Link href="#" className="keep-nav">Log In or Create Account</Nav.Link>
+
+                        <Nav.Link href="#" className="keep-nav">My Cart</Nav.Link>
+
                         <Nav.Link href="#">Home</Nav.Link>
 
                         <NavDropdown title="About Us">
-                            <NavDropdown.Item href="#">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#">Separated link</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Vision</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Share Your Product Ideas</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Trade Shows</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Quality Commitment</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Policy Statments</NavDropdown.Item>
+
                         </NavDropdown>
 
                         <NavDropdown title="Products">
@@ -51,65 +56,76 @@ return (
                         {/* <Nav.Link href="#">Product Care</Nav.Link> */}
 
                         <NavDropdown title="FAQ's">
-                            <NavDropdown.Item href="#">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#">Separated link</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Technical</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Customer Service</NavDropdown.Item>
                         </NavDropdown>
 
                         <NavDropdown title="Knowledge Center">
-                            <NavDropdown.Item href="#">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#">Separated link</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Coating and Materials</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Lens Comparison Charts</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Glossary</NavDropdown.Item>
                         </NavDropdown>
 
                         <Nav.Link href="#">Students</Nav.Link>
 
-                        {/* <NavDropdown title="Optometry Products">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown> */}
-
-                        <NavDropdown title="Locate Distributor">
-                            <NavDropdown.Item href="#">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#">Separated link</NavDropdown.Item>
-                        </NavDropdown>
+                        <Nav.Link href="#">Locate Distributor</Nav.Link>
 
                         <Nav.Link href="#">Contact Us</Nav.Link>
+
                     </Nav>
-                    {/* <Nav className="mr-auto">
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
-                        <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown>
-                    </Nav> */}
-                        <Col className="d-flex rounded-2 overflow-hidden m-1">
-                            <Button type="submit" className="rounded-0 btn-md">
-                                <span className="lnr lnr-magnifier"></span>
-                            </Button>
-                            <Form.Control
-                            type="text"
-                            placeholder="Search the entire store here"
-                            className=" mr-sm-2 rounded-0"
-                            />
-                        </Col>
-                    
+                    <Col className="d-flex rounded-2 overflow-hidden m-1 searchbar-div">
+                        <Button type="submit" className="rounded-0 btn-md">
+                            <span className="lnr lnr-magnifier"></span>
+                        </Button>
+                        <Form.Control
+                        type="text"
+                        placeholder="Search the entire store here"
+                        className=" mr-sm-2 rounded-0"
+                        />
+                    </Col>                    
                 </Navbar.Collapse>
-            </Navbar>            
+            </Navbar>
+            <div id="secondaryNav-nav">
+                <Nav>
+                    <Nav.Link href="#">Home</Nav.Link>
+
+                    <NavDropdown title="About Us">
+                        <NavDropdown.Item href="#">Vision</NavDropdown.Item>
+                        <NavDropdown.Item href="#">Share Your Product Ideas</NavDropdown.Item>
+                        <NavDropdown.Item href="#">Trade Shows</NavDropdown.Item>
+                        <NavDropdown.Item href="#">Quality Commitment</NavDropdown.Item>
+                        <NavDropdown.Item href="#">Policy Statments</NavDropdown.Item>
+
+                    </NavDropdown>
+
+                    <NavDropdown title="Products">
+                        <NavDropdown.Item href="#">View all products</NavDropdown.Item>
+                        <NavDropdown.Item href="#">View products by collection</NavDropdown.Item>
+                        <NavDropdown.Item href="#">View products by pathway</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="#">Product care</NavDropdown.Item>
+                    </NavDropdown>
+
+                    {/* <Nav.Link href="#">Product Care</Nav.Link> */}
+
+                    <NavDropdown title="FAQ's">
+                        <NavDropdown.Item href="#">Technical</NavDropdown.Item>
+                        <NavDropdown.Item href="#">Customer Service</NavDropdown.Item>
+                    </NavDropdown>
+
+                    <NavDropdown title="Knowledge Center">
+                        <NavDropdown.Item href="#">Coating and Materials</NavDropdown.Item>
+                        <NavDropdown.Item href="#">Lens Comparison Charts</NavDropdown.Item>
+                        <NavDropdown.Item href="#">Glossary</NavDropdown.Item>
+                    </NavDropdown>
+
+                    <Nav.Link href="#">Students</Nav.Link>
+
+                    <Nav.Link href="#">Locate Distributor</Nav.Link>
+
+                    <Nav.Link href="#">Contact Us</Nav.Link>
+                </Nav>    
+            </div>
         </section>
     )
 }

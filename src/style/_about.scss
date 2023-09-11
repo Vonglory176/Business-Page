@@ -21,8 +21,8 @@
     
     #aboutContent-div {
         position: relative;
-        margin: auto;
-        max-width: 480px;
+        margin: auto;        
+        max-width: 420px; //480px;
         padding:30px;
 
         // background-image: url("../assets//background/bkg_body.gif");
@@ -50,7 +50,7 @@
             background-color: white;
         }
             #aboutContent-div {
-                height:500px;
+                height:420px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;

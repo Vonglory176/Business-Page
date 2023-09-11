@@ -18,7 +18,7 @@ function App() {
         <About/>
         <Products/>
         <Events/>
-        <Extra/>
+        {/* <Extra/> */}
       </main>
       <Footer/>
     </>

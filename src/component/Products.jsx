@@ -36,7 +36,7 @@ export default function Products() {
             <div id="productContent-div" className='col-12'>
                 <h2>PRODUCTS</h2>
                 <p>Breakthrough lens systems of unparalleled sharpness and clarity that take the forefront of the ophthalmic industry.</p>
-                <Button variant="warning" size="lg" className='w-100'>
+                <Button variant="warning" size="lg" className='w-100 shadow'>
                     View our selection
                 </Button>
             </div>
