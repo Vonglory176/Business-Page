@@ -8,7 +8,7 @@ export default function Events() {
 
     return (
         <section id="events-section" className="container-fluid">
-            <h2 className="text-center text-white">Trade Shows For 2023</h2>
+            <h2 className="text-center text-white">TRADE SHOWS IN 2023</h2>
             <div id="eventTileContainer-div" className="d-flex flex-wrap p-3 justify-content-center">
                 {eventElements}
             </div>
