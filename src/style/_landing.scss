@@ -56,7 +56,10 @@
 		}
 		
 		.slide-track {
-			animation: scroll 10s linear infinite;
+			@media only screen and (max-width: 550px) {animation: scroll 12s linear infinite;}
+			@media only screen and (min-width: 551px) and (max-width:991px) {animation: scroll 25s linear infinite;}
+			@media only screen and (min-width: 992px) {animation: scroll 42s linear infinite;}
+			
 			display: flex;
 			width: 200vw;
 			height:100%;
