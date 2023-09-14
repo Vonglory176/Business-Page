@@ -1,6 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 body {
-  background-image: url("../assets/background/eyebackground4.jpg");
+  background: linear-gradient(90deg, rgb(12, 72, 192) 0%, rgb(0, 133, 199) 10%, rgb(255, 255, 255) 50%, rgb(0, 133, 199) 90%, rgb(12, 72, 192) 100%);
 }
 
 #root {
@@ -30,7 +30,7 @@ h2 {
 }
 
 #navbar-section {
-  background-image: url("../assets/background/bkg_body.png");
+  background-image: url("../assets/background/bkg_body.gif");
 }
 #navbar-section a {
   color: black;
@@ -175,10 +175,24 @@ h2 {
   top: 0;
 }
 #landing-section .slider .slide-track {
-  animation: scroll 10s linear infinite;
   display: flex;
   width: 200vw;
   height: 100%;
+}
+@media only screen and (max-width: 550px) {
+  #landing-section .slider .slide-track {
+    animation: scroll 12s linear infinite;
+  }
+}
+@media only screen and (min-width: 551px) and (max-width: 991px) {
+  #landing-section .slider .slide-track {
+    animation: scroll 25s linear infinite;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #landing-section .slider .slide-track {
+    animation: scroll 42s linear infinite;
+  }
 }
 #landing-section .slider .slide {
   background-image: url("../assets/background/eyebackground4.jpg");
@@ -207,7 +221,7 @@ h2 {
   width: 100%;
   height: 100%;
   opacity: 0.9;
-  background-image: url("../assets/background/bkg_body.png");
+  background-image: url("../assets/background/bkg_body.gif");
 }
 #about-section #aboutWrap-div {
   position: relative;
@@ -276,6 +290,7 @@ h2 {
 }
 #products-section .carousel {
   height: 448px;
+  position: static;
 }
 #products-section .carousel .carousel-inner {
   height: inherit;
@@ -295,6 +310,7 @@ h2 {
   max-width: 480px;
   margin: auto;
   padding: 30px;
+  padding-top: 0px;
 }
 
 @media screen and (min-width: 768px) {
@@ -363,18 +379,32 @@ h2 {
   background: linear-gradient(135deg, hsl(0, 0%, 27%) 0%, hsl(210, 11%, 15%) 100%);
   color: white;
 }
-#footer-section #knowMore-div a {
+#footer-section .footerWrapper-div {
+  max-width: 1450px;
+  margin: auto;
+}
+#footer-section .footerWrapper-div #knowMore-div span {
+  display: grid;
+}
+#footer-section .footerWrapper-div #knowMore-div span a {
   width: -moz-fit-content;
   width: fit-content;
   color: white;
 }
-#footer-section #contact-div .lnr {
+#footer-section .footerWrapper-div #contact-div .lnr {
   margin-top: 1.5px;
   font-size: 20px;
 }
 
 @media screen and (min-width: 576px) {
-  #footer-section {
-    justify-content: center;
+  .footerWrapper-div {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 992px) {
+  .footerWrapper-div #knowMore-div span a {
+    width: -moz-fit-content;
+    width: fit-content;
+    color: white;
   }
 }/*# sourceMappingURL=index.css.map */
