@@ -1,10 +1,11 @@
 #navbar-section {
+    background-image: url("../assets/background/bkg_body.png");
     a {color: black;}
 
     > nav {
         // background-color: white;
         // padding: 0 5px;
-        background-image: url("../assets/background/bkg_body.png");
+        // background-image: url("../assets/background/bkg_body.png");
         >img{padding-left:5px;}
         @media screen and (max-width:991px) {
             height:60px;
@@ -103,7 +104,9 @@
         #secondaryNav-nav {
             display: flex;
             justify-content: center;
-            background-color: #343a40;
+            // background-color: #343a40;
+            background: linear-gradient(135deg, hsla(0, 0%, 27%, 1) 0%, hsla(210, 11%, 15%, 1) 100%);
+
             .nav {
                 display: flex;
                 justify-content: space-between;
