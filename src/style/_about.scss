@@ -44,17 +44,21 @@
         background:none;
 
         #aboutWrap-div::before {
-            display: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            background-image: none;
+            // display: none;
         }
         #aboutWrap-div {
-            background-color: white;
-        }
+            background-image: url("../assets//background/oldGroupBackground.jpg");
+            background-position: center;
+            background-size: cover;
             #aboutContent-div {
                 height:420px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
             }
+        }
     
         #aboutWrap-div:after {
             content:'';
