@@ -1,6 +1,8 @@
 body {
-    background-image: url("../assets/background/eyebackground4.jpg");
-}
+    // background-image: url("../assets/background/eyebackground4.jpg");
+    // background-image: url("../assets/background/backgroundTexture1.png");
+    // background: rgb(0,133,199);
+    background: linear-gradient(90deg, rgba(12,72,192,1) 0%, rgba(0,133,199,1) 10%, rgba(255,255,255,1) 50%, rgba(0,133,199,1) 90%, rgba(12,72,192,1) 100%);}
 
 #root {
     // background-image: url("../assets/background/bkg_body.png");
