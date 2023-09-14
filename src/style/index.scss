@@ -1,12 +1,16 @@
 body {
-    background-image: url("../assets/background/bkg_body.png");
-    // font-family: arial, helvetica, sans-serif;
+    background-image: url("../assets/background/eyebackground4.jpg");
 }
 
 #root {
-    // background: linear-gradient(135deg, hsla(0, 0%, 27%, 0.1) 0%, hsla(210, 11%, 15%, 0.1) 100%);
-
+    // background-image: url("../assets/background/bkg_body.png");
+    background-color: rgba(54, 170, 224, 0.623);
+    // opacity: 0.9;
+    // font-family: arial, helvetica, sans-serif;
 }
+// #root {
+    // background: linear-gradient(135deg, hsla(0, 0%, 27%, 0.1) 0%, hsla(210, 11%, 15%, 0.1) 100%);
+// }
 
 main, nav {
     // display: grid;
@@ -14,6 +18,11 @@ main, nav {
     // grid-template-rows: repeat(7, 100vw);
     margin: auto;
     max-width: 1450px;
+}
+
+main {
+    border-left: solid #343a40 1px;
+    border-right: solid #343a40 1px;
 }
 
 // .contentTile {
