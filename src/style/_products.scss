@@ -6,6 +6,7 @@
     // @media screen and (max-width:767px) {
         .carousel {
             height: 448px;
+            position: static;
             // margin: 0 15px;
             // padding: 15px;
     
@@ -45,6 +46,7 @@
             max-width: 480px;
             margin: auto;
             padding: 30px;
+            padding-top: 0px;
         }
     // }
 }
