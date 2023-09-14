@@ -2,25 +2,52 @@
     background: linear-gradient(135deg, hsla(0, 0%, 27%, 1) 0%, hsla(210, 11%, 15%, 1) 100%);
     color: white;
 
-    #knowMore-div {
+    .footerWrapper-div {
+        max-width: 1450px;
+        margin:auto;
 
-        a {
-            width: fit-content;
-            color:white;
-            // text-decoration: none;
+        #knowMore-div {
+            span {
+                display:grid;
+    
+                a {
+                    width: fit-content;
+                    color:white;
+                    // text-decoration: none;
+                }
+            }
+    
         }
-    }
-
-    #contact-div {
-        .lnr {
-            margin-top:1.5px;
-            font-size: 20px;
+    
+        #contact-div {
+            .lnr {
+                margin-top:1.5px;
+                font-size: 20px;
+            }
         }
     }
 }
 
 @media screen and (min-width:576px) {
-    #footer-section {
-        justify-content: center;
+    .footerWrapper-div {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .footerWrapper-div {
+        // justify-content: space-evenly;
+        #knowMore-div {
+            span {
+                // display:grid;
+                // grid-template-columns: 1fr 1fr 1fr;
+                
+                a {
+                    width: fit-content;
+                    color:white;
+                    // text-decoration: none;
+                }        
+            }
+        }
     }
 }
