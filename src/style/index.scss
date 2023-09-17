@@ -23,8 +23,10 @@ main, nav {
 }
 
 main {
-    border-left: solid #343a40 1px;
-    border-right: solid #343a40 1px;
+    @media only screen and (min-width:1465px) {
+        border-left: solid #343a40 1px;
+        border-right: solid #343a40 1px;
+    } 
 }
 
 // .contentTile {
