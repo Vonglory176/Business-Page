@@ -1,5 +1,7 @@
 #footer-section {
-    background: linear-gradient(135deg, hsla(0, 0%, 27%, 1) 0%, hsla(210, 11%, 15%, 1) 100%);
+    // background: linear-gradient(135deg, hsla(0, 0%, 27%, 1) 0%, hsla(210, 11%, 15%, 1) 100%);
+    background: linear-gradient(135deg, rgb(44, 48, 51) 0%, hsla(0, 0%, 27%, 1) 20%, hsla(0, 0%, 27%, 1) 80%, rgb(44, 48, 51) 100%);
+
     color: white;
 
     .footerWrapper-div {
@@ -45,8 +47,9 @@
                 a {
                     width: fit-content;
                     color:white;
-                    // text-decoration: none;
-                }        
+                    text-decoration: none;
+                }
+                a:hover {text-decoration: underline;}
             }
         }
     }
