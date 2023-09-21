@@ -1,7 +1,12 @@
 #about-section {
-    background-image: url('../assets/background/ocularGroup2.png');
-    background-position: center;
-    background-size: cover;
+    // background-image: url('../assets/background/ocularGroup2.png');
+    // background-position: center;
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    #aboutImage-img {
+        object-fit: contain;
+    }
 
     #aboutWrap-div:before {
         content: ' ';
@@ -17,32 +22,34 @@
 
     #aboutWrap-div {
         position: relative;
-    }
+
+        #aboutContent-div {
+            position: relative;
+            margin: auto;
+            max-width: 530px; //480px;
+            padding:30px;
     
-    #aboutContent-div {
-        position: relative;
-        margin: auto;        
-        max-width: 420px; //480px;
-        padding:30px;
-
-        // background-image: url("../assets//background/bkg_body.gif");
-        // background-color:rgba(0, 0, 0, 0.5);
-        // margin-top: 100%;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // text-align: left;
-        // flex-direction: column;
-        // height: 100vw;
+            // background-image: url("../assets//background/bkg_body.gif");
+            // background-color:rgba(0, 0, 0, 0.5);
+            // margin-top: 100%;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            // text-align: left;
+            // flex-direction: column;
+            // height: 100vw;
+        }
     }
 
-    @media  screen and (max-width:418px) {padding-top: 100%;}
-    @media  screen and (min-width:419px) and (max-width:767px) {padding-top:75%;}
-    @media  screen and (min-width:768px) and (max-width:991px) {padding-top:50%;}
+    // @media  screen and (max-width:418px) {padding-top: 100%;}
+    // @media  screen and (min-width:419px) and (max-width:767px) {padding-top:75%;}
+    // @media  screen and (min-width:768px) and (max-width:991px) {padding-top:50%;}
     @media  screen and (min-width:992px) {        
         padding-left:50%;
         background:none;
 
+        #aboutImage-img {display: none;} //Fix later
+        
         #aboutWrap-div::before {
             background-color: rgba(255, 255, 255, 0.9);
             background-image: none;
@@ -53,6 +60,7 @@
             background-size: cover;
             #aboutContent-div {
                 height:420px;
+                // max-width: 420px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;

@@ -1,9 +1,11 @@
 import {Button} from 'react-bootstrap'
 import stockPhoto1 from "../assets/stock/ophthamologist2.jpg"
+import ocularGroup from "../assets/background/ocularGroup2.png"
 
 export default function About() {
     return (
         <section id="about-section" className='container-fluid'>
+            <img id="aboutImage-img" className="img-fluid" src={ocularGroup}/>
             <div id="aboutWrap-div">
                 <div id="aboutContent-div">
                     <h2>ABOUT OCULAR</h2>
