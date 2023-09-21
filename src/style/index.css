@@ -41,6 +41,7 @@ h2 {
 }
 #navbar-section #primaryNav-div {
   background-image: url("../assets/background/bkg_body.gif");
+  background-color: white;
 }
 #navbar-section #primaryNav-div > nav > img {
   padding-left: 5px;
