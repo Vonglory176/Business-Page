@@ -1,7 +1,7 @@
 #landing-section {
     // background-image: url("../assets/background/eyebackground4.jpg");
     min-height: calc(100vh - 62px);
-	margin-top:60px;
+	@media only screen and (max-width:991px) {margin-top:60px;}
     // min-width: 100vw;
 
     text-align: center;
@@ -77,6 +77,6 @@
 	#landing-section {
 		min-height: 400px;
 		max-height: 100vh;
-		margin-top: 100px;
+		// margin-top: 100px;
 	}
 }
