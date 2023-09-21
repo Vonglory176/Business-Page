@@ -32,19 +32,24 @@ h2 {
 }
 
 #navbar-section {
-  background-image: url("../assets/background/bkg_body.gif");
+  background: linear-gradient(135deg, rgb(44, 48, 51) 0%, hsl(0, 0%, 27%) 20%, hsl(0, 0%, 27%) 80%, rgb(44, 48, 51) 100%);
+  z-index: 1000;
+  top: 0;
 }
 #navbar-section a {
   color: black;
 }
-#navbar-section > nav > img {
+#navbar-section #primaryNav-div {
+  background-image: url("../assets/background/bkg_body.gif");
+}
+#navbar-section #primaryNav-div > nav > img {
   padding-left: 5px;
 }
 @media screen and (max-width: 991px) {
-  #navbar-section > nav {
+  #navbar-section #primaryNav-div > nav {
     height: 60px;
   }
-  #navbar-section > nav > button {
+  #navbar-section #primaryNav-div > nav > button {
     display: flex;
     justify-content: end;
     margin-right: 5px;
@@ -52,46 +57,47 @@ h2 {
     border: none !important;
     box-shadow: 0 0 0 0 !important;
   }
-  #navbar-section > nav .navbar-collapse.show, #navbar-section > nav .navbar-collapse.collapsing {
+  #navbar-section #primaryNav-div > nav .navbar-collapse.show, #navbar-section #primaryNav-div > nav .navbar-collapse.collapsing {
     background-color: rgba(255, 255, 255, 0.9);
     margin-top: 8px;
+    z-index: 1000;
   }
-  #navbar-section > nav .navbar-collapse.show .navbar-nav > a, #navbar-section > nav .navbar-collapse.show .navbar-nav > div > a, #navbar-section > nav .navbar-collapse.collapsing .navbar-nav > a, #navbar-section > nav .navbar-collapse.collapsing .navbar-nav > div > a {
+  #navbar-section #primaryNav-div > nav .navbar-collapse.show .navbar-nav > a, #navbar-section #primaryNav-div > nav .navbar-collapse.show .navbar-nav > div > a, #navbar-section #primaryNav-div > nav .navbar-collapse.collapsing .navbar-nav > a, #navbar-section #primaryNav-div > nav .navbar-collapse.collapsing .navbar-nav > div > a {
     padding-left: 5px;
     border-top: 1px solid rgba(0, 0, 0, 0.175);
     color: black;
   }
-  #navbar-section > nav .navbar-collapse.show .navbar-nav a:hover, #navbar-section > nav .navbar-collapse.collapsing .navbar-nav a:hover {
+  #navbar-section #primaryNav-div > nav .navbar-collapse.show .navbar-nav a:hover, #navbar-section #primaryNav-div > nav .navbar-collapse.collapsing .navbar-nav a:hover {
     background-color: #e9ecef;
   }
-  #navbar-section > nav .navbar-collapse.show a:not(.dropdown-toggle):focus, #navbar-section > nav .navbar-collapse.collapsing a:not(.dropdown-toggle):focus {
+  #navbar-section #primaryNav-div > nav .navbar-collapse.show a:not(.dropdown-toggle):focus, #navbar-section #primaryNav-div > nav .navbar-collapse.collapsing a:not(.dropdown-toggle):focus {
     background: #0082c5;
     color: white;
   }
-  #navbar-section > nav .navbar-collapse.show .nav-item, #navbar-section > nav .navbar-collapse.collapsing .nav-item {
+  #navbar-section #primaryNav-div > nav .navbar-collapse.show .nav-item, #navbar-section #primaryNav-div > nav .navbar-collapse.collapsing .nav-item {
     max-height: 40px;
     display: block;
     overflow: hidden;
   }
-  #navbar-section > nav .navbar-collapse.show .nav-item > a::after, #navbar-section > nav .navbar-collapse.collapsing .nav-item > a::after {
+  #navbar-section #primaryNav-div > nav .navbar-collapse.show .nav-item > a::after, #navbar-section #primaryNav-div > nav .navbar-collapse.collapsing .nav-item > a::after {
     border-left: 4.5px solid transparent;
     border-right: 4.5px solid transparent;
     vertical-align: 0.1rem;
     width: 9px;
   }
-  #navbar-section > nav .navbar-collapse.show .nav-item > a.show::after, #navbar-section > nav .navbar-collapse.collapsing .nav-item > a.show::after {
+  #navbar-section #primaryNav-div > nav .navbar-collapse.show .nav-item > a.show::after, #navbar-section #primaryNav-div > nav .navbar-collapse.collapsing .nav-item > a.show::after {
     border-top: 0;
     border-bottom: 6px solid #343a40;
   }
-  #navbar-section > nav .navbar-collapse.show .nav-item > a:not(.show)::after, #navbar-section > nav .navbar-collapse.collapsing .nav-item > a:not(.show)::after {
+  #navbar-section #primaryNav-div > nav .navbar-collapse.show .nav-item > a:not(.show)::after, #navbar-section #primaryNav-div > nav .navbar-collapse.collapsing .nav-item > a:not(.show)::after {
     border-top: 6px solid #343a40;
     border-bottom: 0;
   }
-  #navbar-section > nav .navbar-collapse.show .nav-item.show, #navbar-section > nav .navbar-collapse.collapsing .nav-item.show {
+  #navbar-section #primaryNav-div > nav .navbar-collapse.show .nav-item.show, #navbar-section #primaryNav-div > nav .navbar-collapse.collapsing .nav-item.show {
     transition: all 0.4s;
     max-height: 300px;
   }
-  #navbar-section > nav .navbar-collapse.show .nav-item .dropdown-menu.show, #navbar-section > nav .navbar-collapse.collapsing .nav-item .dropdown-menu.show {
+  #navbar-section #primaryNav-div > nav .navbar-collapse.show .nav-item .dropdown-menu.show, #navbar-section #primaryNav-div > nav .navbar-collapse.collapsing .nav-item .dropdown-menu.show {
     margin: 0;
     margin-left: -5px;
     border-right: none;
@@ -99,48 +105,58 @@ h2 {
     border-bottom: none;
     border-radius: 0;
   }
-  #navbar-section > nav .navbar-collapse.show .nav-item, #navbar-section > nav .navbar-collapse.show .nav-item a, #navbar-section > nav .navbar-collapse.collapsing .nav-item, #navbar-section > nav .navbar-collapse.collapsing .nav-item a {
+  #navbar-section #primaryNav-div > nav .navbar-collapse.show .nav-item, #navbar-section #primaryNav-div > nav .navbar-collapse.show .nav-item a, #navbar-section #primaryNav-div > nav .navbar-collapse.collapsing .nav-item, #navbar-section #primaryNav-div > nav .navbar-collapse.collapsing .nav-item a {
     margin: 0;
   }
 }
-#navbar-section #secondaryNav-nav {
+#navbar-section #secondaryNav-div {
   display: none;
 }
 @media screen and (min-width: 992px) {
-  #navbar-section > nav #responsive-navbar-nav {
+  #navbar-section {
+    position: static;
+  }
+  #navbar-section #primaryNav-div > nav #responsive-navbar-nav {
     display: flex;
     justify-content: end;
   }
-  #navbar-section > nav a:not(.keep-nav) {
+  #navbar-section #primaryNav-div > nav a:not(.keep-nav) {
     display: none;
   }
-  #navbar-section > nav .navbar-nav > a:hover {
+  #navbar-section #primaryNav-div > nav .navbar-nav > a:hover {
     text-decoration: underline;
   }
-  #navbar-section > nav .searchbar-div {
+  #navbar-section #primaryNav-div > nav .searchbar-div {
     max-width: 300px;
   }
-  #navbar-section #secondaryNav-nav {
+  #navbar-section .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  #navbar-section #secondaryNav-div {
     display: flex;
     justify-content: center;
     background: linear-gradient(135deg, rgb(44, 48, 51) 0%, hsl(0, 0%, 27%) 20%, hsl(0, 0%, 27%) 80%, rgb(44, 48, 51) 100%);
   }
-  #navbar-section #secondaryNav-nav .nav {
+  #navbar-section #secondaryNav-div .nav {
     display: flex;
     justify-content: space-between;
     width: 1450px;
   }
-  #navbar-section #secondaryNav-nav .nav > a, #navbar-section #secondaryNav-nav .nav > .nav-item > a {
+  #navbar-section #secondaryNav-div .nav > a, #navbar-section #secondaryNav-div .nav > .nav-item > a {
     color: white;
   }
-  #navbar-section #secondaryNav-nav .nav .nav-item > div > a:focus {
+  #navbar-section #secondaryNav-div .nav .nav-item > div > a:focus {
     background: #0082c5;
     color: white;
   }
-  #navbar-section #secondaryNav-nav .nav .nav-item > a, #navbar-section #secondaryNav-nav .nav > a {
+  #navbar-section #secondaryNav-div .nav .nav-item > a, #navbar-section #secondaryNav-div .nav > a {
     position: relative;
   }
-  #navbar-section #secondaryNav-nav .nav .nav-item > a::before, #navbar-section #secondaryNav-nav .nav > a::before {
+  #navbar-section #secondaryNav-div .nav .nav-item > a::before, #navbar-section #secondaryNav-div .nav > a::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -154,26 +170,26 @@ h2 {
     transform: scale(0);
     transform-origin: center;
   }
-  #navbar-section #secondaryNav-nav .nav .nav-item > a:hover::before, #navbar-section #secondaryNav-nav .nav .nav-item > a:focus::before, #navbar-section #secondaryNav-nav .nav .nav-item > a:is(.show), #navbar-section #secondaryNav-nav .nav > a:hover::before, #navbar-section #secondaryNav-nav .nav > a:focus::before, #navbar-section #secondaryNav-nav .nav > a:is(.show) {
+  #navbar-section #secondaryNav-div .nav .nav-item > a:hover::before, #navbar-section #secondaryNav-div .nav .nav-item > a:focus::before, #navbar-section #secondaryNav-div .nav .nav-item > a:is(.show), #navbar-section #secondaryNav-div .nav > a:hover::before, #navbar-section #secondaryNav-div .nav > a:focus::before, #navbar-section #secondaryNav-div .nav > a:is(.show) {
     opacity: 1;
     transform: translate3d(0, 0.2em, 0);
     transform: scale(1);
   }
-  #navbar-section #secondaryNav-nav .nav .nav-item > a::after {
+  #navbar-section #secondaryNav-div .nav .nav-item > a::after {
     border-left: 4.5px solid transparent;
     border-right: 4.5px solid transparent;
     vertical-align: 0.1rem;
     width: 9px;
   }
-  #navbar-section #secondaryNav-nav .nav .nav-item > a.show::after {
+  #navbar-section #secondaryNav-div .nav .nav-item > a.show::after {
     border-top: 0;
     border-bottom: 6px solid white;
   }
-  #navbar-section #secondaryNav-nav .nav .nav-item > a:not(.show)::after {
+  #navbar-section #secondaryNav-div .nav .nav-item > a:not(.show)::after {
     border-top: 6px solid white;
     border-bottom: 0;
   }
-  #navbar-section #secondaryNav-nav .nav .nav-item .dropdown-menu {
+  #navbar-section #secondaryNav-div .nav .nav-item .dropdown-menu {
     margin-top: -2px;
   }
 }
@@ -186,10 +202,14 @@ h2 {
 
 #landing-section {
   min-height: calc(100vh - 62px);
-  margin-top: 60px;
   text-align: center;
   color: #fff;
   position: relative;
+}
+@media only screen and (max-width: 991px) {
+  #landing-section {
+    margin-top: 60px;
+  }
 }
 #landing-section #landingLogo-div {
   z-index: 1;
@@ -258,13 +278,11 @@ h2 {
   #landing-section {
     min-height: 400px;
     max-height: 100vh;
-    margin-top: 100px;
   }
 }
-#about-section {
-  background-image: url("../assets/background/ocularGroup2.png");
-  background-position: center;
-  background-size: cover;
+#about-section #aboutImage-img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #about-section #aboutWrap-div:before {
   content: " ";
@@ -280,31 +298,19 @@ h2 {
 #about-section #aboutWrap-div {
   position: relative;
 }
-#about-section #aboutContent-div {
+#about-section #aboutWrap-div #aboutContent-div {
   position: relative;
   margin: auto;
-  max-width: 420px;
+  max-width: 530px;
   padding: 30px;
-}
-@media screen and (max-width: 418px) {
-  #about-section {
-    padding-top: 100%;
-  }
-}
-@media screen and (min-width: 419px) and (max-width: 767px) {
-  #about-section {
-    padding-top: 75%;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  #about-section {
-    padding-top: 50%;
-  }
 }
 @media screen and (min-width: 992px) {
   #about-section {
     padding-left: 50%;
     background: none;
+  }
+  #about-section #aboutImage-img {
+    display: none;
   }
   #about-section #aboutWrap-div::before {
     background-color: rgba(255, 255, 255, 0.9);
