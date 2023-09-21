@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './style/index.css'
 
-import Navbar from './component/navbar'
-import Landing from './component/landing'
+import Navbar from './component/Navbar'
+import Landing from './component/Landing'
 import About from './component/About'
 import Products from './component/Products'
 import Events from './component/Events'
@@ -12,8 +12,8 @@ import Footer from './component/Footer'
 function App() {
   return (
     <>
+      <Navbar/>
       <main>
-        <Navbar/>
         <Landing/>
         <About/>
         <Products/>
