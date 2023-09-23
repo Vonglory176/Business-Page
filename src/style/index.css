@@ -7,6 +7,17 @@ body {
   background-color: rgba(54, 170, 224, 0.623);
 }
 
+.loading {
+  filter: blur(10px);
+  -webkit-clip-path: inset(0);
+          clip-path: inset(0);
+}
+
+.loaded {
+  filter: blur(0px);
+  transition: filter 0.5s linear;
+}
+
 main, nav {
   margin: auto;
   max-width: 1450px;
@@ -202,6 +213,7 @@ h2 {
 }
 
 #landing-section {
+  background-color: hsla(220, 88%, 40%, 0.5);
   min-height: calc(100vh - 62px);
   text-align: center;
   color: #fff;
@@ -293,8 +305,8 @@ h2 {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.9;
   background-image: url("../assets/background/bkg_body.gif");
+  background-color: white;
 }
 #about-section #aboutWrap-div {
   position: relative;
@@ -307,11 +319,13 @@ h2 {
 }
 @media screen and (min-width: 992px) {
   #about-section {
-    padding-left: 50%;
+    max-height: 448px;
     background: none;
+    display: flex;
   }
   #about-section #aboutImage-img {
-    display: none;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   #about-section #aboutWrap-div::before {
     background-color: rgba(255, 255, 255, 0.9);
@@ -324,23 +338,10 @@ h2 {
   }
   #about-section #aboutWrap-div #aboutContent-div {
     height: 420px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  #about-section #aboutWrap-div:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    margin-left: -100%;
-    background-image: url("../assets/background/ocularGroup2.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
   }
 }
 
@@ -361,6 +362,9 @@ h2 {
   justify-content: center;
   align-items: center;
   height: inherit;
+}
+#products-section .carousel .carousel-inner .carousel-item.active .loading, #products-section .carousel .carousel-inner .carousel-item-start .loading, #products-section .carousel .carousel-inner .carousel-item-end .loading {
+  width: 100% !important;
 }
 #products-section .carousel .carousel-inner .carousel-item.active img, #products-section .carousel .carousel-inner .carousel-item-start img, #products-section .carousel .carousel-inner .carousel-item-end img {
   max-height: 100%;
