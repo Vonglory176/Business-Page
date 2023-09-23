@@ -1,8 +1,11 @@
+import {Col, Row, Form, Button} from "react-bootstrap";
+import OptimizedImage from "./OptimizedImage"
+
 import logo from "../assets/logo/OcularLogo4.png"
+import logoSmall from "../assets/logo/OcularLogo4Small.png"
 import youtube from "../assets/youtube.svg"
 import facebook from "../assets/facebook.svg"
 import twitter from "../assets/twitter.svg"
-import {Col, Row, Form, Button} from "react-bootstrap";
 
 export default function Footer() {
     return (
@@ -14,7 +17,13 @@ export default function Footer() {
                     <Form inline="true">
                         <Row className="gap-2">
                             <Col xs="8">
-                                <img src={logo} style={{maxWidth:"143.03px"}}/> {/*className="img-fluid"*/}
+                                {/* <img src={logo} style={{maxWidth:"143.03px"}}/> className="img-fluid" */}
+                                <OptimizedImage
+                                    placeholderSrc={logoSmall}
+                                    src={logo}
+                                    className="img-fluid"
+                                    style={{maxWidth:"143.03px", width:"100%"}}
+                                />
                             </Col>
                             <Col xs="auto">
                                 <h6>Sign up for our newsletter and receive the latest product news, articles, and offers.</h6>

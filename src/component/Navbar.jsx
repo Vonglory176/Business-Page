@@ -1,7 +1,9 @@
-import logo from "../assets/logo/OcularLogo4.png"
 import { useState, useEffect } from "react";
-import {Form, Button, ButtonGroup, Dropdown, DropdownButton} from "react-bootstrap"
-import { Nav, Navbar, NavDropdown, Col, Row } from "react-bootstrap";
+import {Form, Button, ButtonGroup, Dropdown, DropdownButton, Nav, Navbar, NavDropdown, Col, Row } from "react-bootstrap"
+
+import OptimizedImage from "./OptimizedImage";
+import logo from "../assets/logo/OcularLogo4.png"
+import logoSmall from "../assets/logo/OcularLogo4Small.png"
 
 
 export default function NavbarComponent() {
@@ -88,7 +90,13 @@ return (
         <section id="navbar-section" className="fixed-top" style={{paddingBottom:scrollPosition >= 62 && window.innerWidth >= 992? "40px":"0"}}>
             <div id="primaryNav-div">
                 <Navbar collapseOnSelect expand="lg"> 
-                    <img src={logo} alt="Ocuar Instruments Logo"/>
+                    {/* <img src={logo} alt="Ocuar Instruments Logo"/> */}
+                    <OptimizedImage
+                        placeholderSrc={logoSmall}
+                        src={logo}
+                        className="img-fluid"
+                        style={{maxWidth:"143.03px", width:"100%"}}
+                    />
 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
