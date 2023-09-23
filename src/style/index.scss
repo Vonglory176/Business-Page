@@ -14,6 +14,16 @@ body {
     // background: linear-gradient(135deg, hsla(0, 0%, 27%, 0.1) 0%, hsla(210, 11%, 15%, 0.1) 100%);
 // }
 
+.loading {
+    filter: blur(10px);
+    clip-path: inset(0);
+}
+
+.loaded {
+    filter: blur(0px);
+    transition: filter 0.5s linear;
+}
+
 main, nav {
     // display: grid;
     // grid-template-columns: repeat(7, 100vw);
