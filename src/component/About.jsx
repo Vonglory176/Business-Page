@@ -1,7 +1,7 @@
 import {Button} from 'react-bootstrap'
 import OptimizedImage from './OptimizedImage'
 import ocularGroupSmall from "../assets/background/ocularGroup2Small.png"
-import ocularGroup from "../assets/background/ocularGroup2.png"
+import ocularGroup from "../assets/background/ocularGroup2.jpg"
 
 export default function About() {
     return (
