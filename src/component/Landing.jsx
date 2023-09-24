@@ -1,12 +1,31 @@
+import { useState, useEffect } from "react"
+
 import OptimizedImage from "./OptimizedImage"
 import logo from "../assets/logo/OcularLogo4.png"
 import logoSmall from "../assets/logo/OcularLogo4Small.png"
+import eyeballBackground from '../assets/background/eyebackground4.jpg'
+import eyeballBackgroundSmall from '../assets/background/eyebackgroundSmall.jpg'
 
 export default function Landing() {
+    const [imageBackgroundLoaded, setImageBackgroundLoaded] = useState(false);
+
+    useEffect(() => {
+        const img = new Image();
+        img.src = eyeballBackground;
+        img.onload = () => setImageBackgroundLoaded(true);
+    }, []);
+
+    let backgroundSlide = 
+        <div
+            className={`slide ${imageBackgroundLoaded? "loaded" : "loading"}`}
+            style={{backgroundImage: imageBackgroundLoaded ? `url(${eyeballBackground})` : `url(${eyeballBackgroundSmall})`}}
+        >            
+        </div>
+    
+
     return (
         <section id="landing-section" className="d-flex flex-column justify-content-center align-items-center">
             <div id="landingLogo-div" className="d-flex flex-column">
-                {/* <img id="landingLogo-img" className="img-fluid" src={logo}/> */}
                 <OptimizedImage
                     placeholderSrc={logoSmall}
                     src={logo}
@@ -18,16 +37,11 @@ export default function Landing() {
                 <h6>Creating solutions to save sight since 1966.</h6>
                 {/* <h5>Quality. Innovation. Technology. Service.</h5> */}
             </div>
-            {/* <Carousel data-bs-theme="dark" controls={false} indicators={false} touch={false} wrap={true} interval={0}>
-                <Carousel.Item></Carousel.Item>
-                <Carousel.Item></Carousel.Item>
-                <Carousel.Item></Carousel.Item>
-            </Carousel> */}
 
             <div className="slider">
                 <div className="slide-track">
-                    <div className="slide"></div>
-                    <div className="slide"></div>
+                    {backgroundSlide}
+                    {backgroundSlide}
                 </div>
             </div>
         </section>
